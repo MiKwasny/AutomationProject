@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestAssertions {
 
-    static WebDriverWait wait = new WebDriverWait(Driver.driver, 10);
+    static WebDriverWait wait = new WebDriverWait(Driver.driver, 20);
 
     public static void FinalTourBarPageCheck() {
 
@@ -32,7 +32,7 @@ public class TestAssertions {
     }
 
     public static void FinalHotelModulePageCheck() {
-
+        wait.until(ExpectedConditions.urlContains("https://www.phptravels.net/hotels/search/5/80-400/98/183-189"));
         String HotelModuleUrl = Driver.driver.getCurrentUrl();
         Assert.assertEquals("https://www.phptravels.net/hotels/search/5/80-400/98/183-189", HotelModuleUrl);
     }
@@ -40,7 +40,7 @@ public class TestAssertions {
     public static void FinalCarModulePageCheck() {
 
         String CarModuleUrl = Driver.driver.getCurrentUrl();
-        Assert.assertEquals("https://www.phptravels.net/cars/search?stars=4&price=&type=15&pickup=&txtSearch=&searching=&modType=", CarModuleUrl);
+        Assert.assertEquals("https://www.phptravels.net/cars/search?stars=4&price=60%2C460&type=15&pickup=yes&txtSearch=&searching=&modType=", CarModuleUrl);
     }
 
     public static void FinalTourModulePageCheck() {
@@ -57,7 +57,7 @@ public class TestAssertions {
 
 
     public static void FinalHotelBarPageCheck() {
-
+        wait.until(ExpectedConditions.urlContains("https://www.phptravels.net/hotels/detail/istanbul/alzer-hotel-istanbul/16-02-2019/25-08-2020/3/2"));
         String HotelBarUrl = Driver.driver.getCurrentUrl();
         Assert.assertEquals("https://www.phptravels.net/hotels/detail/istanbul/alzer-hotel-istanbul/16-02-2019/25-08-2020/3/2", HotelBarUrl);
     }

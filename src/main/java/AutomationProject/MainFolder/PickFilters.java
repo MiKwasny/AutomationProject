@@ -212,8 +212,8 @@ public class PickFilters {
             filterPositions.Refundable.click();
         }
 
-        public static void SearchByAirLines() {
-            driver.findElement(By.linkText("Emirates")).click();
+        public static void SearchByAirLines(int FilterNumber) {
+            driver.findElement(By.id("div.row:nth-child(8) > div:nth-child(1) > div:nth-child("+FilterNumber+") > ins:nth-child(2)")).click();
         }
     }
 
