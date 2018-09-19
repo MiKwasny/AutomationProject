@@ -1,1 +1,1 @@
-Welcome to my AutomationProject for website phptravels.net using BDD approach, enjoy!
+Welcome to my AutomationProject for website phptravels.net using Cucumber, enjoy!
