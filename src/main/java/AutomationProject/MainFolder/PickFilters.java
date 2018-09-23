@@ -213,8 +213,12 @@ public class PickFilters {
         }
 
         public static void SearchByAirLines(int FilterNumber) {
+<<<<<<< HEAD
             driver.findElement(By.id("#body-section > div.listingbg > div > div.col-md-3 > div > div.panel-body > div:nth-child("+FilterNumber+") > div > div.icheckbox_square-grey > ins")).click();
 
+=======
+            driver.findElement(By.id("div.row:nth-child(8) > div:nth-child(1) > div:nth-child("+FilterNumber+") > ins:nth-child(2)")).click();
+>>>>>>> 89f9f09ee7be26927b494fd793ff736b821de419
         }
     }
 
