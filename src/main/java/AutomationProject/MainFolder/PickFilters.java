@@ -212,8 +212,9 @@ public class PickFilters {
             filterPositions.Refundable.click();
         }
 
-        public static void SearchByAirLines() {
-            driver.findElement(By.linkText("Emirates")).click();
+        public static void SearchByAirLines(int FilterNumber) {
+            driver.findElement(By.id("#body-section > div.listingbg > div > div.col-md-3 > div > div.panel-body > div:nth-child("+FilterNumber+") > div > div.icheckbox_square-grey > ins")).click();
+
         }
     }
 
@@ -437,7 +438,7 @@ public class PickFilters {
 
                 //driver.findElement(By.linkText("Yes")).click();
 
-                Select PickUp = new Select(driver.findElement(By.cssSelector("#collapse5 > div > select")));
+                Select PickUp = new Select(driver.findElement(By.cssSelector(".selectx")));
                 PickUp.selectByVisibleText("Yes");
             }
 
@@ -446,7 +447,7 @@ public class PickFilters {
 
                 //driver.findElement(By.linkText("No")).click();
 
-                Select PickUp = new Select(driver.findElement(By.cssSelector("#collapse5 > div > select")));
+                Select PickUp = new Select(driver.findElement(By.cssSelector(".selectx")));
                 PickUp.selectByVisibleText("No");
             }
         }
