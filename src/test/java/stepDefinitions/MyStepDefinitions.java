@@ -238,5 +238,38 @@ public class MyStepDefinitions {
 
         TestAssertions.FinalTourBarPageCheck();
     }
+
+    @Given("^User is on PHP Travels page with hotels list$")
+    public void user_is_on_php_travels_page_with_hotels_list() throws Throwable {
+
+        WebBrowserLaunch.Launch();
+        Actions.ClickHotelsButton();
+    }
+
+    @When("^User Picks chosen Hotel by Picture or LinkText or DetailsButton$")
+    public void user_picks_chosen_hotel_by_picture_or_linktext_or_detailsbutton() throws Throwable {
+
+        BookHotel.BookHotelPosition("Picture",2);
+    }
+
+    @Then("^Hotel Details displayed$")
+    public void hotel_details_displayed() throws Throwable {
+
+        System.out.println("To DO");
+    }
+
+    @Then("^User Chose option of the available rooms$")
+    public void user_chose_option_of_the_available_rooms() throws Throwable {
+
+        System.out.println("To DO");
+    }
+
+    @And("^User picks room and clicks Book button$")
+    public void user_picks_room_and_clicks_book_button() throws Throwable {
+
+        BookHotel.BookHotelAvailableRoomsPick("TRIPLE ROOMS");
+    }
+
+
 }
 

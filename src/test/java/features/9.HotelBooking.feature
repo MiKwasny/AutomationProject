@@ -1,7 +1,7 @@
 Feature: Hotel Booking
   Scenario: Hotel Booking
     Given User is on PHP Travels page with hotels list
-    When User Picks chosen Hotel by Picture/LinkText/DetailsButton
+    When User Picks chosen Hotel by Picture or LinkText or DetailsButton
     Then Hotel Details displayed
-    Then User picks one of the available rooms by modifying options
-    And User clicks Book button
+    Then User Chose option of the available rooms
+    And User picks room and clicks Book button
